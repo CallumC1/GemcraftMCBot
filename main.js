@@ -29,7 +29,7 @@ client.once('ready', () => {
 		status: "online",
 		game: {
 			name: "!help",
-			type: "WATCHING"
+			type: "PLAYING"
 		}
 	})
 
