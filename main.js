@@ -25,7 +25,7 @@ client.once('ready', () => {
 	console.log('GemcraftMC Bot Ready!');
 
 	// client.user.setStatus('online')
-	client.user.setActivity(`!help - GemcraftMc`, {type: "playing"}); 
+	client.user.setPresence(`!help - GemcraftMc`, {type: "playing"}); 
 });
 
 
