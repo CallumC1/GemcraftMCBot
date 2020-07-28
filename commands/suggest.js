@@ -18,7 +18,7 @@ module.exports = {
             )
 
 
-        const channel = message.guild.channels.cache.find(x => x.name === '💡suggestions');
+        const channel = message.guild.channels.cache.find(x => x.name === '💡suggestions' || 'suggestions');
         if(!channel) return message.reply("Couldn't find suggestions channel.");
 
         message.reply("Thanks, your suggestion has been submitted!")
