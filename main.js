@@ -22,7 +22,7 @@ for (const file of commandFiles) {
 }
 
 client.once('ready', () => {
-	console.log('Ready!');
+	console.log('GemcraftMC Bot Ready!');
 
 	// client.user.setStatus('online')
 	client.user.setPresence({
