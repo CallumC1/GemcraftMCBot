@@ -25,13 +25,7 @@ client.once('ready', () => {
 	console.log('GemcraftMC Bot Ready!');
 
 	// client.user.setStatus('online')
-	client.user.setActivity({
-		status: "online",
-		game: {
-			name: "!help",
-			type: "PLAYING"
-		}
-	})
+	client.user.setActivity('Type !help')
 
 });
 
