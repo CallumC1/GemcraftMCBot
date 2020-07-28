@@ -13,7 +13,6 @@ module.exports = {
 	const taggedUser = message.mentions.users.first();
 	const banReason = args.slice(1).join(" ")
 
-	if (!message.member.hasPermission("BAN_MEMBERS")) return message
 
 	message.channel.send(`You wanted to kick: ${taggedUser.username}`);
 	},
