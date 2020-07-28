@@ -1,0 +1,26 @@
+[
+	{
+		"question": "What colour is the sky?",
+		"answers": ["blue"]
+	},
+	{
+		"question": "How many letters are there in the alphabet?",
+		"answers": ["26", "twenty-six", "twenty six", "twentysix"]
+	},
+	{
+		"question": "What is the rarest M&M color on sale?",
+		"answers": ["brown"]
+	},
+	{
+		"question": "Which of Shakespeare’s plays is the longest?",
+		"answers": ["hamlet"]
+	},
+	{
+		"question": "What is the tallest breed of dog in the world?",
+		"answers": ["great dane"]
+	},
+	{
+		"question": "Is redgames0_0 better then flaming",
+		"answers": ["yes", "100%"]
+	}
+]
