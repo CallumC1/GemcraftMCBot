@@ -28,8 +28,7 @@ client.once('ready', () => {
     client.user.setPresence({
         game: {
             name: 'Use !help',
-            type: "Playing",
-            url: "https://discordapp.com/"
+            type: "Playing"
         }
 
 });
