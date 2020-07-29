@@ -24,7 +24,6 @@ module.exports = {
         }
         if(args0 == 'FALSE'){
             message.channel.send(args.slice(1).join(" "))
-        }else
-            return message.channel.send("Please type either True or False for Embed Argument.")
+        }
 	},
 };
