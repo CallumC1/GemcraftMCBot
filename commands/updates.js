@@ -10,8 +10,8 @@ module.exports = {
 	execute(message, args) {
         const update = new Discord.MessageEmbed()
             .setColor(args[0])
-            .setTitle('GemcraftMC Update')
-            .setThumbnail(`https://i.imgur.com/jkx7wP0.png`)
+            .setTitle('Gemcraft Survival | 📝 Update')
+            // .setThumbnail(`https://i.imgur.com/jkx7wP0.png`)
             .setTimestamp()
             .setDescription('```diff\n' + args.slice(1).join(" ") + '```')
             .setFooter(`Sent by: ${message.author.username} | play.gemcraftmc.net`)
