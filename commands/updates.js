@@ -9,7 +9,7 @@ module.exports = {
     usage: '<Embed> <Text>', //Add Embed True / False Option? If no args 0 use embed |
 	execute(message, args) {
 
-        if(args[0] === 'Embed'){
+        if(args[0] === 'True'){
 
             const update = new Discord.MessageEmbed()
                 .setColor('#5dfa39')
@@ -20,7 +20,9 @@ module.exports = {
                 .setFooter(`Sent by: ${message.author.username} | play.gemcraftmc.net`)
 
             message.channel.send(update);
-        }else
+        }if(args[0] === 'False'){
             message.channel.send(args.slice(1).join(" "))
+        }else
+            message.channel.send("Please type either True or False for Embed Argument.")
 	},
 };
