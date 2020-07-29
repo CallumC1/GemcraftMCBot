@@ -21,6 +21,6 @@ module.exports = {
 
             message.channel.send(update);
         }else
-            message.channel.send(args.slice(1).join)
+            message.channel.send(args.slice(1).join(" "))
 	},
 };
