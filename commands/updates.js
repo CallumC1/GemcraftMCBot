@@ -23,7 +23,7 @@ module.exports = {
 
             message.channel.send(update);
             message.channel.delete;
-        }if(args[0] === 'FALSE'){
+        }if(args1 === 'FALSE'){
             message.channel.send(args.slice(1).join(" "))
         }else
             message.channel.send("Please type either True or False for Embed Argument.")
