@@ -13,7 +13,7 @@ module.exports = {
             .setTitle('GemcraftMC Update')
             .setThumbnail(`https://i.imgur.com/jkx7wP0.png`)
             .setTimestamp()
-            .setDescription('```diff' + args.slice(1).join(" ") + '```')
+            .setDescription('```diff\n' + args.slice(1).join(" ") + '```')
             .setFooter(`Sent by: ${message.author.username} | play.gemcraftmc.net`)
 
         message.channel.send(update);
