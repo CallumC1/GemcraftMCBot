@@ -21,8 +21,10 @@ module.exports = {
                 .setFooter(`Sent by: ${message.author.username} • play.gemcraftmc.net`)
 
             message.channel.send(update)
-        }if(args0 == 'FALSE'){
+        }
+        if(args0 == 'FALSE'){
             message.channel.send(args.slice(1).join(" "))
-        }else{ return message.channel.send("Please type either True or False for Embed Argument.")}
+        }else
+            return message.channel.send("Please type either True or False for Embed Argument.")
 	},
 };
