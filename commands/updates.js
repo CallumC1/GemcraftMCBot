@@ -10,7 +10,7 @@ module.exports = {
 	execute(message, args) {
 
         const args0 = args[0].toUpperCase()
-        if(args0 === 'TRUE'){
+        if(args0 == 'TRUE'){
 
             const update = new Discord.MessageEmbed()
                 .setColor('#5dfa39')
@@ -22,7 +22,7 @@ module.exports = {
 
             message.channel.send(update);
             message.channel.delete;
-        }if(args0 === 'FALSE'){
+        }if(args0 == 'FALSE'){
             message.channel.send(args.slice(1).join(" "))
         }else
             message.channel.send("Please type either True or False for Embed Argument.")
