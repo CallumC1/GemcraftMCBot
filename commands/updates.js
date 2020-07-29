@@ -7,16 +7,15 @@ module.exports = {
     guildOnly: true,
     args: true,
     usage: '<Hex Code> <Text>',
-	execute(message, args, secondargs) {
-        const exampleembed = new Discord.MessageEmbed()
+	execute(message, args) {
+        const update = new Discord.MessageEmbed()
             .setColor(args[0])
-            .setTitle('Server Update')
+            .setTitle('GemcraftMC Update')
             .setThumbnail(`https://i.imgur.com/jkx7wP0.png`)
             .setTimestamp()
-            .setDescription(args.slice(1).join(" "))
-            .setFooter(`Sent by: ${message.author.username} `)
+            .setDescription('```diff' + args.slice(1).join(" ") + '```')
+            .setFooter(`Sent by: ${message.author.username} | play.gemcraftmc.net`)
 
-        message.channel.send(exampleembed);
-        message.channel.delete
+        message.channel.send(update);
 	},
 };
