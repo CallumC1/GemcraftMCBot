@@ -9,7 +9,7 @@ module.exports = {
     usage: '<Embed> <Text>', //Add Embed True / False Option? If no args 0 use embed |
 	execute(message, args) {
 
-        if(!args[0]){
+        if(args[0] === 'Embed'){
 
             const update = new Discord.MessageEmbed()
                 .setColor('#5dfa39')
