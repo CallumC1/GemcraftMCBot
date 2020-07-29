@@ -20,8 +20,7 @@ module.exports = {
                 .setDescription('```diff\n' + args.slice(1).join(" ") + '```')
                 .setFooter(`Sent by: ${message.author.username} • play.gemcraftmc.net`)
 
-            message.channel.send(update);
-            message.channel.delete;
+            message.channel.send(update)
         }if(args0 == 'FALSE'){
             message.channel.send(args.slice(1).join(" "))
         }else
