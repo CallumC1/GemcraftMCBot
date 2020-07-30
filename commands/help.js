@@ -32,15 +32,14 @@ module.exports = {
             return message.reply('That\'s not a valid command!');
         }
 
-        data.push(`Name: ${command.name}`);
+        data.push(`**Name:** ${command.name}`);
 
         if (command.aliases) data.push(`**Aliases:** ${command.aliases.join(', ')}`);
         if (command.description) data.push(`**Description:** ${command.description}`);
         if (command.usage) data.push(`**Usage:** ${prefix}${command.name} ${command.usage}`);
         if (command.role) data.push(`**Required Role:** ${command.role}`);
         if (command.permission) data.push(`**Required Permssion:** ${command.permission}`);
-
-        data.push(`Cooldown: ${command.cooldown || 3} second(s)`);
+        if(command.cooldown) data.push(`**Cooldown:** ${command.cooldown} second(s)`);
 
         message.channel.send(data, {split: true});
         // send data
