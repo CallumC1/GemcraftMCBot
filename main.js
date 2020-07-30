@@ -34,7 +34,6 @@ client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 
 	const args = message.content.slice(prefix.length).split(/ +/);
-	const textargs = message.content.slice(prefix.length).split();
 	const commandName = args.shift().toLowerCase();
 
 	const command = client.commands.get(commandName) 
@@ -80,7 +79,7 @@ client.on('message', message => {
 	}
 
 	// No Args & Usage
-	if (command.args && !args.length || command.args >= args.length) {
+	if (command.args && !args.length || command.args < args.length) {
 		let reply = `You did not provide any / enough arguments, ${message.author}!`;
 		if (command.usage) {
 			reply += `\nCorect Usage: \`${prefix}${command.name} ${command.usage}\``;
