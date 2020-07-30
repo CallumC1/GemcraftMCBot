@@ -3,7 +3,6 @@ module.exports = {
 	name: 'update',
     description: 'Server Updates',
     role: 'Owner',
-    cooldown: 1,
     guildOnly: true,
     args: true,
     usage: '<Embed | True / False> <Text>', //Add Embed True / False Option? If no args 0 use embed |
