@@ -40,7 +40,7 @@ client.on('guildMemberAdd', member => {
 	.setDescription('**Server IP ▸** play.gemcraftmc.net \n**Website ▸** Coming Soon! \n**Store ▸**store.gemcraftmc.net')
 	.setFooter(`Make sure to Verify in the General Rules channel!`)
 
-message.channel.send(memberJoin)
+channel.send(memberJoin)
 });
 
 
