@@ -35,7 +35,7 @@ client.on('guildMemberAdd', member => {
 	const memberJoin = new Discord.MessageEmbed()
 	.setColor('#21ed69')
 	.setTitle(`Welcome ${member} to Gemcraft Survival!`)
-	.setThumbnail(message.author.displayAvatarURL)
+	.setThumbnail(member.displayAvatarURL)
 	.setTimestamp()
 	.setDescription('**Server IP ▸** play.gemcraftmc.net \n**Website ▸** Coming Soon! \n**Store ▸**store.gemcraftmc.net')
 	.setFooter(`Make sure to Verify in the General Rules channel!`)
