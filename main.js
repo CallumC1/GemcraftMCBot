@@ -21,14 +21,14 @@ for (const file of commandFiles) {
 
 }
 
-client.once('ready', () => {
+client.once('ready', async ()  => {
 	console.log('GemcraftMC Bot Ready!');
 
 	// client.user.setStatus('online')
 	client.user.setActivity(`Gemcraft | Use !help`);
 });
 
-client.on('guildMemberAdd', member => {
+client.on('guildMemberAdd', async member => {
 	const channel = member.guild.channels.cache.find(ch => ch.name === 'welcome');
 	if (!channel) return;
 
@@ -37,14 +37,14 @@ client.on('guildMemberAdd', member => {
 	.setTitle(`Welcome to Gemcraft Survival!`)
 	.setThumbnail(member.displayAvatarURL)
 	.setTimestamp()
-	.setDescription(`Welcome, ${member}. Please Verify in #📜general-rules.\n` + '\n**Server IP ▸** play.gemcraftmc.net \n**Website ▸** Coming Soon! \n**Store ▸**store.gemcraftmc.net ' + `${member}`)
+	.setDescription(`Welcome, ${member}.\n` + '\n**Server IP ▸** play.gemcraftmc.net \n**Website ▸** Coming Soon! \n**Store ▸**store.gemcraftmc.net\n')
 	.setFooter(`Click the ✅ in #📜general-rules to verify!`)
 
 channel.send(memberJoin)
 });
 
 
-client.on('message', message => {
+client.on('message', async message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 
 	const args = message.content.slice(prefix.length).split(/ +/);
