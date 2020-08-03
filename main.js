@@ -28,6 +28,20 @@ client.once('ready', () => {
 	client.user.setActivity(`Gemcraft | Use !help`);
 });
 
+client.on('guildMemberAdd', member => {
+	const channel = member.guild.channels.cache.find(ch => ch.name === 'welcome');
+	if (!channel) return;
+
+	const memberJoin = new Discord.MessageEmbed()
+	.setColor('#21ed69')
+	.setTitle(`Welcome ${member} to Gemcraft Survival!`)
+	.setThumbnail(message.author.displayAvatarURL)
+	.setTimestamp()
+	.setDescription('**Server IP ▸** play.gemcraftmc.net \n**Website ▸** Coming Soon! \n**Store ▸**store.gemcraftmc.net')
+	.setFooter(`Make sure to Verify in the General Rules channel!`)
+
+message.channel.send(memberJoin)
+});
 
 
 client.on('message', message => {
