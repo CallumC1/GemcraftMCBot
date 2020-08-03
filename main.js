@@ -37,7 +37,7 @@ client.on('guildMemberAdd', member => {
 	.setTitle(`Welcome ${member} to Gemcraft Survival!`)
 	.setThumbnail(member.displayAvatarURL)
 	.setTimestamp()
-	.setDescription('**Server IP ▸** play.gemcraftmc.net \n**Website ▸** Coming Soon! \n**Store ▸**store.gemcraftmc.net ' + `@${member.displayName}`)
+	.setDescription('**Server IP ▸** play.gemcraftmc.net \n**Website ▸** Coming Soon! \n**Store ▸**store.gemcraftmc.net ' + `${member}`)
 	.setFooter(`Make sure to Verify in the General Rules channel!`)
 
 channel.send(memberJoin)
