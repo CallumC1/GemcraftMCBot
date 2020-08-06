@@ -3,7 +3,7 @@ module.exports = {
 	name: 'info',
     description: 'Server Information',
     role: 'Owner',
-    guildOnly: true,
+    guildOnly: false,
     args: true,
     usage: '<Embed | True / False> <Text>', //Add Embed True / False Option? If no args 0 use embed |
 	execute(message, args) {
