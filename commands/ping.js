@@ -1,8 +1,11 @@
+const { Message } = require("discord.js");
+
 module.exports = {
 	name: 'ping',
 	description: 'Pong!',
 	cooldown: 1,
 	execute(message, args) {
-		message.channel.send('Pong.');
+		const ping = Date.now - message.createdTimestap;
+		message.channel.send(':ping_pong: Pong!' + ping + "ms");
 	},
 };
