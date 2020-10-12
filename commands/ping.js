@@ -5,7 +5,7 @@ module.exports = {
 	description: 'Pong!',
 	cooldown: 1,
 	execute(message, args) {
-		var pingmsg = await message.channel.send("Pinging Server...")
+		var pingmsg = await message.channel.send("Pinging Server....")
 		message.channel.send(':ping_pong: Pong!' + `${pingmsg.Date.now() - message.createdTimestamp}` + "ms");
 	},
 };
