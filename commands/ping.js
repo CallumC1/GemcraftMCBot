@@ -6,6 +6,6 @@ module.exports = {
 	cooldown: 1,
 	execute(message, args) {
 		const ping = Date.now() - message.createdTimestap;
-		message.channel.send(':ping_pong: Pong!' + ping + "ms");
+		message.channel.send(':ping_pong: Pong!' + `${Date.now() - message.createdTimestap}` + "ms");
 	},
 };
