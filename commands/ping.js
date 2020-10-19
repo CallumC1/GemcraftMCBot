@@ -9,7 +9,7 @@ module.exports = {
 		message.channel.send(`🏓 Latency is ${Date.now() - message.createdTimestamp}ms.`);
 
 		const botping = new Discord.MessageEmbed()
-			.setColour('#037bfc')
+			.setColor('#037bfc')
 			.setTitle('Bot Latency')
 			.setDescription(`Latency: ${Date.now() - message.createdTimestamp}ms`)
 
