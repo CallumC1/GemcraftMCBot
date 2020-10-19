@@ -1,5 +1,6 @@
 const { Message, MessageEmbed, DiscordAPIError } = require("discord.js");
 
+const Discord = require('discord.js');
 module.exports = {
 	name: 'ping',
 	description: 'Pong! Get the bots ping.',
