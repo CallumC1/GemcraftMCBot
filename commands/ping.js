@@ -5,7 +5,11 @@ module.exports = {
 	description: 'Pong!',
 	cooldown: 1,
 	execute(message, args) {
-		var pingmsg = await message.channel.send("Pinging Server....")
-		message.channel.send(':ping_pong: Pong!' + `${pingmsg.Date.now() - message.createdTimestamp}` + "ms");
+		message.channel.send("Getting bot ping...").then(m =>{
+			var ping = m.createdTimestamp - message.createdTimestamp;
+			var trueping = Math.round(bot.pi);
+		
+			m.edit(`Bot latency: ${botPing}`);
+		});
 	},
 };
