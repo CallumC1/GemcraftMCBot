@@ -6,6 +6,5 @@ module.exports = {
 	cooldown: 1,
 	execute(message, args) {
 		message.channel.send(`🏓Latency is ${Date.now() - message.createdTimestamp}ms.`);
-		});
 	},
 };
