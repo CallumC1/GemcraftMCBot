@@ -9,8 +9,8 @@ module.exports = {
 	execute(message, args) {
         const bugreport = new Discord.MessageEmbed()
             .setColor('#fa1105')
-            .setTitle(`Bug Report - By: ${message.author.username}`)
-            .setTimestamp()
+            .setTitle(`Bug Report`)
+            .setTimestamp(`By: ${message.author.username}`)
             .addFields(
                 { name: 'Description', value: '```' + args.slice(0).join(" ") + '```'},
                 // { name: '\u200B', value: '\u200B' },
