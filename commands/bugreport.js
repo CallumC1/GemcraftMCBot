@@ -8,13 +8,13 @@ module.exports = {
     usage: '<Detailed dscription of the bug.>',
 	execute(message, args) {
         const bugreport = new Discord.MessageEmbed()
-            .setColor('#f5a442')
+            .setColor('#fa1105')
             .setTitle(`Bug Report - By: ${message.author.username}`)
             .setTimestamp()
             .addFields(
                 { name: 'Description', value: '```' + args.slice(0).join(" ") + '```'},
-                { name: '\u200B', value: '\u200B' },
-                { name: 'Need to report a bug?', value: 'Type !bug <Text> in #bot-commands.'}
+                // { name: '\u200B', value: '\u200B' },
+                { name: 'Found a bug?', value: 'Type !bug <Text> in #bot-commands to report it.'}
             )
 
 
