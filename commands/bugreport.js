@@ -24,10 +24,5 @@ module.exports = {
 
         message.reply("Thanks for your report! We will look at this as soon as we can.")
         channel.send(bugreport)
-        // channel.send(suggestion).then(suggestionm => {
-        // suggestionm.react('✅')
-        //     .then(suggestionm.react('❌'))
-        // }
-        //)
 	},
 };
