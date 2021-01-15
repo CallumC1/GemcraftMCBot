@@ -10,22 +10,21 @@ module.exports = {
         const { commands } = message.client;
         // send data
         if (!args.length) {
-            if (command.development == true) {
-                stop
-            }
-            data.push(`**Here\'s a list of the commands I have:**`)
-            data.push('`' + commands.map(command => command.name).join('\n') + '`');
-            data.push(`\n**Find out more about a command by typing:** \`${prefix}help <command name>\``)
+            if (command.development == null || false) {
+                data.push(`**Here\'s a list of the commands I have:**`)
+                data.push('`' + commands.map(command => command.name).join('\n') + '`');
+                data.push(`\n**Find out more about a command by typing:** \`${prefix}help <command name>\``)
 
-            return message.author.send(data, { split: true})
-                .then(() => {
-                    if(message.channel.type === 'dm') return;
-                    message.reply('You have been sent a DM with my commands!');
-                })
-                .catch(error => {
-                    console.error(`Could not send the Help DM to ${message.author.tag}.\n`, error);
-                    message.reply('I can\'t DM you right now. Do you have your DMs disabled?');
-                });
+                return message.author.send(data, { split: true })
+                    .then(() => {
+                        if (message.channel.type === 'dm') return;
+                        message.reply('You have been sent a DM with my commands!');
+                    })
+                    .catch(error => {
+                        console.error(`Could not send the Help DM to ${message.author.tag}.\n`, error);
+                        message.reply('I can\'t DM you right now. Do you have your DMs disabled?');
+                    });
+            }
         }
         const name = args[0].toLowerCase();
         const command = commands.get(name) || commands.find(c => c.aliases && c.aliases.includes(name));
