@@ -10,7 +10,9 @@ module.exports = {
         const { commands } = message.client;
         // send data
         if (!args.length) {
-        
+            if (command.development == true) {
+                stop
+            }
             data.push(`**Here\'s a list of the commands I have:**`)
             data.push('`' + commands.map(command => command.name).join('\n') + '`');
             data.push(`\n**Find out more about a command by typing:** \`${prefix}help <command name>\``)
@@ -31,7 +33,6 @@ module.exports = {
         if (!command) {
             return message.reply('That\'s not a valid command!');
         }
-
         data.push(`**Name:** ${command.name}`);
 
         if (command.aliases) data.push(`**Aliases:** ${command.aliases.join(', ')}`);

@@ -2,6 +2,7 @@ module.exports = {
     name: 'annoucement2',
     alias: ['an'],
     description: 'Testing',
+    development: true,
     role: 'Admin',
     guildOnly: true,
 	cooldown: 1,

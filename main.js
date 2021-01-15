@@ -123,6 +123,12 @@ client.on('message', async message => {
 	setTimeout(() => timestamps.delete(message.author.id), cooldownAmount)
 	//cooldown implementation
 
+    //development implementation
+	if (command.development {
+		
+	}
+	//development implementation
+
 
 	try {
 		command.execute(message, args);
